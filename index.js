@@ -1,7 +1,7 @@
 'use strict'
 
 const { get } = require('got')
-const { json, send } = require('micro')
+const { send } = require('micro')
 const generatePage = require('./lib/generate-page')
 
 module.exports = async (request, response) => {
