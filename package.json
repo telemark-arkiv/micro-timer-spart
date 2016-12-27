@@ -1,7 +1,7 @@
 {
   "name": "micro-timer-spart",
   "description": "Viser hvor mange timer som er spart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -11,11 +11,6 @@
   "main": "index.js",
   "engines": {
     "node": ">=6.9.2"
-  },
-  "now": {
-    "engines": {
-      "node": "6.9.2"
-    }
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
