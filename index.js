@@ -6,6 +6,6 @@ const generatePage = require('./lib/generate-page')
 const systems = require('./config/systems')
 
 module.exports = async (request, response) => {
-  const data = await Promise.all(systems.map((item) => get(item.url, {json: true})))
+  const data = await Promise.all(Object.keys(systems).map((itemKey) => get(systems[itemKey].url, {json: true})))
   send(response, 200, generatePage(data.map((site) => site.body)))
 }
