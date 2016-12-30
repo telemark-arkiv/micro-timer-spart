@@ -3,10 +3,10 @@
 const { get } = require('got')
 const { send } = require('micro')
 const generatePage = require('./lib/generate-page')
-const systems = require('./config/systems')
 const totalSum = (prev, actual) => prev + actual
 
 module.exports = async (request, response) => {
+  const systems = (await get('https://systems.config.tfk.allthethings.win', {json: true})).body
   const data = await Promise.all(Object.keys(systems).map((itemKey) => get(systems[itemKey].url, {json: true})))
   const minutterSpart = data
                           .map((response) => response.body)
