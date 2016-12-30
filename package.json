@@ -29,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/zrrrzzt/micro-timer-spart.git"
+    "url": "http://github.com/telemark/micro-timer-spart.git"
   },
   "bugs": {
-    "url": "http://github.com/zrrrzzt/micro-timer-spart/issues"
+    "url": "http://github.com/telemarks/micro-timer-spart/issues"
   },
   "devDependencies": {
     "coveralls": "2.11.15",
