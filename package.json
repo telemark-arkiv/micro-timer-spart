@@ -1,7 +1,7 @@
 {
   "name": "micro-timer-spart",
   "description": "Viser hvor mange timer som er spart",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "private": true,
   "author": {
@@ -20,7 +20,8 @@
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
-    "start": "micro -p 3000"
+    "start": "micro -p 3000",
+    "deploy": "now && now alias"
   },
   "keywords": [
     "microservice",
@@ -34,6 +35,9 @@
   },
   "bugs": {
     "url": "http://github.com/telemarks/micro-timer-spart/issues"
+  },
+  "now": {
+    "alias": "timerspart.automate.allthethings.win"
   },
   "devDependencies": {
     "coveralls": "2.11.15",
