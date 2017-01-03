@@ -1,7 +1,7 @@
 {
   "name": "micro-timer-spart",
   "description": "Viser hvor mange timer som er spart",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "private": true,
   "author": {
