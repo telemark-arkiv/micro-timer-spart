@@ -5,5 +5,21 @@ Viser hvor mange timer som er spart vha automatisering av arbeidsprosesser siden
 
 Henter konfigurasjonsfil fra [https://systems.config.tfk.allthethings.win](https://systems.config.tfk.allthethings.win)
 
+## API
+
+### **/**
+
+Viser timer spart i html
+
+### **/?format=json**
+
+Returnerer json med timer spart
+
+```JavaScript
+ {
+    timerSpart: 3876
+ }
+```
+
 ## License
 [MIT](LICENSE)
