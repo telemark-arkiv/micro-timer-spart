@@ -18,7 +18,7 @@ module.exports = async (request, response) => {
                           .map((system) => system[system.field] * system.factor)
                           .reduce(totalSum, 0)
 
-  const results = [{name: "Timer spart", status: minutterSpart / 60}]
+  const results = [{name: 'Timer spart', status: minutterSpart / 60}]
 
   if (pathname === '/json') {
     send(response, 200, results)
