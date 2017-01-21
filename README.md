@@ -7,19 +7,27 @@ Henter konfigurasjonsfil fra [https://systems.config.tfk.allthethings.win](https
 
 ## API
 
-### **/**
+### **/json**
 
-Viser timer spart i html
+Returns json of formatted data.
 
-### **/?format=json**
+#### GET
 
-Returnerer json med timer spart
+```bash
+$ curl https://timer.status.t-fk.win/json
+```
 
-```JavaScript
- {
-    timerSpart: 3876
- }
+### **/html**
+
+Renders formatted data to html. 
+
+#### GET
+
+```bash
+$ curl https://timer.status.t-fk.win/html
 ```
 
 ## License
 [MIT](LICENSE)
+
+![alt text](https://robots.kebabstudios.party/micro-timer-start.png "Robohash image of micro-timer-spart")
