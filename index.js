@@ -12,11 +12,11 @@ module.exports = async (request, response) => {
   const { pathname } = await parse(request.url, true)
   if (pathname === '/json' || pathname === '/html') {
     const systems = (await get('https://systems.config.tfk.allthethings.win', {json: true})).body
-    const data = await Promise.all(Object.keys(systems).map((itemKey) => get(systems[itemKey].url, {json: true})))
+    const collectData = async itemKey => Object.assign({systemid: itemKey, response: await get(systems[itemKey].url, {json: true})})
+    const data = await Promise.all(Object.keys(systems).map(collectData))
     const minutterSpart = data
-      .map((response) => response.body)
-      .map((site) => Object.assign(site, systems[site.systemid]))
-      .map((system) => system[system.field] * system.factor)
+      .map(item => Object.assign(item.response.body, systems[item.systemid]))
+      .map(system => system[system.field] * system.factor)
       .reduce(totalSum, 0)
 
     const results = [{name: 'Timer spart', status: minutterSpart / 60}]
