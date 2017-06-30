@@ -1,7 +1,7 @@
 {
   "name": "micro-timer-spart",
   "description": "Viser hvor mange timer som er spart",
-  "version": "2.1.21",
+  "version": "2.1.22",
   "license": "MIT",
   "private": true,
   "author": {
@@ -49,7 +49,7 @@
     "coveralls": "2.13.1",
     "nsp": "2.6.2",
     "standard": "10.0.2",
-    "tap": "10.7.0"
+    "tap": "10.5.2"
   },
   "dependencies": {
     "got": "7.0.0",
