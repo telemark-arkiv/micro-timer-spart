@@ -5,7 +5,7 @@
 ###########################################################
 
 # Setting the base to nodejs 7.5.0
-FROM node:7.5.0-alpine
+FROM node:6.14.3-alpine
 
 # Maintainer
 MAINTAINER Geir Gåsodden
